@@ -11,7 +11,7 @@ import XCTest
 final class CategoryTest: XCTestCase {
 
     func testMealsList() async throws {
-        let useCase = FetchDessertMealList()
+        let useCase = FetchDessertMealListUseCase()
         let result = await useCase.exec()
         switch result {
         case .success(let data):

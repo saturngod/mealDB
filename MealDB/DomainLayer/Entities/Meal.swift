@@ -12,7 +12,7 @@ struct Meals: Decodable {
 }
 
 struct Meal: Decodable {
-    let strMeal: String
-    let strMealThumb: String
+    let strMeal: String?
+    let strMealThumb: String?
     let idMeal: String
 }

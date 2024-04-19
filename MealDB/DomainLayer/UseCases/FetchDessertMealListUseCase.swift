@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FetchDessertMealList {
+class FetchDessertMealListUseCase {
     private let repo: CategoryRepo
     
     init(repo: CategoryRepo = CategoryRepoImpl()) {
@@ -19,7 +19,7 @@ class FetchDessertMealList {
         
         switch result {
         case .success(let meals):
-            return .success(meals.sorted { $0.strMeal < $1.strMeal})
+            return .success(meals.sorted { $0.strMeal ?? "" < $1.strMeal ?? ""})
         case .failure(let error):
             return .failure(error)
         }

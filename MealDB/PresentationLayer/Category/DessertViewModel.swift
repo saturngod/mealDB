@@ -15,7 +15,7 @@ class DessertViewModel: ObservableObject {
     
     func loadMeals() async {
         self.viewState = .loading
-        let useCase = FetchDessertMealList()
+        let useCase = FetchDessertMealListUseCase()
         let result = await useCase.exec()
         self.handleMealsResult(result: result)
     }

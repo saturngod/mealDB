@@ -23,8 +23,8 @@
 		6550519F2BD2FBEB003868B7 /* CategoryRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6550519E2BD2FBEB003868B7 /* CategoryRepo.swift */; };
 		655051A42BD2FC51003868B7 /* CategoryRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051A32BD2FC51003868B7 /* CategoryRepoImpl.swift */; };
 		655051A62BD2FC86003868B7 /* BaseRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051A52BD2FC86003868B7 /* BaseRepo.swift */; };
-		655051A92BD2FE98003868B7 /* FetchDessertMealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051A82BD2FE98003868B7 /* FetchDessertMealList.swift */; };
-		655051AA2BD2FEDD003868B7 /* FetchDessertMealList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051A82BD2FE98003868B7 /* FetchDessertMealList.swift */; };
+		655051A92BD2FE98003868B7 /* FetchDessertMealListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051A82BD2FE98003868B7 /* FetchDessertMealListUseCase.swift */; };
+		655051AA2BD2FEDD003868B7 /* FetchDessertMealListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051A82BD2FE98003868B7 /* FetchDessertMealListUseCase.swift */; };
 		655051AB2BD2FEDF003868B7 /* CategoryRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6550519E2BD2FBEB003868B7 /* CategoryRepo.swift */; };
 		655051AC2BD2FEE2003868B7 /* BaseRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051A52BD2FC86003868B7 /* BaseRepo.swift */; };
 		655051AD2BD2FEE5003868B7 /* CategoryRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051A32BD2FC51003868B7 /* CategoryRepoImpl.swift */; };
@@ -39,6 +39,20 @@
 		655051BC2BD30A9F003868B7 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 655051BB2BD30A9F003868B7 /* Nuke */; };
 		655051BE2BD30A9F003868B7 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 655051BD2BD30A9F003868B7 /* NukeUI */; };
 		655051C02BD30AF5003868B7 /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051BF2BD30AF5003868B7 /* MealView.swift */; };
+		655051C22BD3117F003868B7 /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051C12BD3117F003868B7 /* MealDetail.swift */; };
+		655051C42BD31336003868B7 /* MealRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051C32BD31336003868B7 /* MealRepo.swift */; };
+		655051C62BD3135F003868B7 /* MealRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051C52BD3135F003868B7 /* MealRepoImpl.swift */; };
+		655051C82BD31492003868B7 /* MealTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051C72BD31492003868B7 /* MealTest.swift */; };
+		655051CA2BD3152D003868B7 /* MealEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051C92BD3152D003868B7 /* MealEndPoint.swift */; };
+		655051CC2BD31A2A003868B7 /* MealError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051CB2BD31A2A003868B7 /* MealError.swift */; };
+		655051CE2BD31D66003868B7 /* LookUpMealUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051CD2BD31D66003868B7 /* LookUpMealUseCase.swift */; };
+		655051D12BD31E41003868B7 /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051D02BD31E41003868B7 /* Measurement.swift */; };
+		655051D22BD321B9003868B7 /* LookUpMealUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051CD2BD31D66003868B7 /* LookUpMealUseCase.swift */; };
+		655051D32BD322F4003868B7 /* MealRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051C32BD31336003868B7 /* MealRepo.swift */; };
+		655051D42BD322F6003868B7 /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051C12BD3117F003868B7 /* MealDetail.swift */; };
+		655051D52BD32306003868B7 /* MealRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051C52BD3135F003868B7 /* MealRepoImpl.swift */; };
+		655051D62BD32328003868B7 /* MealEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051C92BD3152D003868B7 /* MealEndPoint.swift */; };
+		655051D72BD32362003868B7 /* MealError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051CB2BD31A2A003868B7 /* MealError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,10 +92,18 @@
 		6550519E2BD2FBEB003868B7 /* CategoryRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepo.swift; sourceTree = "<group>"; };
 		655051A32BD2FC51003868B7 /* CategoryRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRepoImpl.swift; sourceTree = "<group>"; };
 		655051A52BD2FC86003868B7 /* BaseRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepo.swift; sourceTree = "<group>"; };
-		655051A82BD2FE98003868B7 /* FetchDessertMealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDessertMealList.swift; sourceTree = "<group>"; };
+		655051A82BD2FE98003868B7 /* FetchDessertMealListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDessertMealListUseCase.swift; sourceTree = "<group>"; };
 		655051B52BD30596003868B7 /* DessertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertViewModel.swift; sourceTree = "<group>"; };
 		655051B82BD306DD003868B7 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		655051BF2BD30AF5003868B7 /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
+		655051C12BD3117F003868B7 /* MealDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
+		655051C32BD31336003868B7 /* MealRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRepo.swift; sourceTree = "<group>"; };
+		655051C52BD3135F003868B7 /* MealRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRepoImpl.swift; sourceTree = "<group>"; };
+		655051C72BD31492003868B7 /* MealTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTest.swift; sourceTree = "<group>"; };
+		655051C92BD3152D003868B7 /* MealEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealEndPoint.swift; sourceTree = "<group>"; };
+		655051CB2BD31A2A003868B7 /* MealError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealError.swift; sourceTree = "<group>"; };
+		655051CD2BD31D66003868B7 /* LookUpMealUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookUpMealUseCase.swift; sourceTree = "<group>"; };
+		655051D02BD31E41003868B7 /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				6550516F2BD2F6A7003868B7 /* CategoryTest.swift */,
+				655051C72BD31492003868B7 /* MealTest.swift */,
 			);
 			path = MealDBTests;
 			sourceTree = "<group>";
@@ -203,6 +226,7 @@
 			children = (
 				655051902BD2F805003868B7 /* APIEndPoint.swift */,
 				655051922BD2F82B003868B7 /* CategoryEndPoint.swift */,
+				655051C92BD3152D003868B7 /* MealEndPoint.swift */,
 			);
 			path = APIEndPoint;
 			sourceTree = "<group>";
@@ -212,6 +236,7 @@
 			children = (
 				655051A72BD2FE83003868B7 /* UseCases */,
 				655051A02BD2FBF2003868B7 /* Repository */,
+				655051CF2BD31E1B003868B7 /* ValueObject */,
 				655051952BD2F8EE003868B7 /* Entities */,
 			);
 			path = DomainLayer;
@@ -221,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				655051962BD2F8F9003868B7 /* Meal.swift */,
+				655051C12BD3117F003868B7 /* MealDetail.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -246,6 +272,7 @@
 			children = (
 				6550519E2BD2FBEB003868B7 /* CategoryRepo.swift */,
 				655051A52BD2FC86003868B7 /* BaseRepo.swift */,
+				655051C32BD31336003868B7 /* MealRepo.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -254,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				655051A32BD2FC51003868B7 /* CategoryRepoImpl.swift */,
+				655051C52BD3135F003868B7 /* MealRepoImpl.swift */,
 			);
 			path = RepostoriesImpl;
 			sourceTree = "<group>";
@@ -261,7 +289,8 @@
 		655051A72BD2FE83003868B7 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				655051A82BD2FE98003868B7 /* FetchDessertMealList.swift */,
+				655051A82BD2FE98003868B7 /* FetchDessertMealListUseCase.swift */,
+				655051CD2BD31D66003868B7 /* LookUpMealUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -280,8 +309,17 @@
 			isa = PBXGroup;
 			children = (
 				655051B82BD306DD003868B7 /* ViewState.swift */,
+				655051CB2BD31A2A003868B7 /* MealError.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		655051CF2BD31E1B003868B7 /* ValueObject */ = {
+			isa = PBXGroup;
+			children = (
+				655051D02BD31E41003868B7 /* Measurement.swift */,
+			);
+			path = ValueObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,14 +464,21 @@
 				655051912BD2F805003868B7 /* APIEndPoint.swift in Sources */,
 				655051B92BD306DD003868B7 /* ViewState.swift in Sources */,
 				655051972BD2F8F9003868B7 /* Meal.swift in Sources */,
+				655051CA2BD3152D003868B7 /* MealEndPoint.swift in Sources */,
 				6550515F2BD2F6A6003868B7 /* MealDBApp.swift in Sources */,
+				655051C62BD3135F003868B7 /* MealRepoImpl.swift in Sources */,
 				6550518E2BD2F7E4003868B7 /* NetworkService.swift in Sources */,
 				655051932BD2F82B003868B7 /* CategoryEndPoint.swift in Sources */,
 				6550519C2BD2F9B1003868B7 /* APIService.swift in Sources */,
-				655051A92BD2FE98003868B7 /* FetchDessertMealList.swift in Sources */,
+				655051A92BD2FE98003868B7 /* FetchDessertMealListUseCase.swift in Sources */,
 				6550518C2BD2F7D2003868B7 /* HTTPMethod.swift in Sources */,
 				6550519F2BD2FBEB003868B7 /* CategoryRepo.swift in Sources */,
+				655051C42BD31336003868B7 /* MealRepo.swift in Sources */,
+				655051CC2BD31A2A003868B7 /* MealError.swift in Sources */,
+				655051D12BD31E41003868B7 /* Measurement.swift in Sources */,
 				655051B62BD30596003868B7 /* DessertViewModel.swift in Sources */,
+				655051C22BD3117F003868B7 /* MealDetail.swift in Sources */,
+				655051CE2BD31D66003868B7 /* LookUpMealUseCase.swift in Sources */,
 				655051A42BD2FC51003868B7 /* CategoryRepoImpl.swift in Sources */,
 				655051C02BD30AF5003868B7 /* MealView.swift in Sources */,
 			);
@@ -443,17 +488,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				655051C82BD31492003868B7 /* MealTest.swift in Sources */,
 				655051B22BD2FEF4003868B7 /* NetworkService.swift in Sources */,
 				655051B02BD2FEEE003868B7 /* CategoryEndPoint.swift in Sources */,
-				655051AA2BD2FEDD003868B7 /* FetchDessertMealList.swift in Sources */,
+				655051AA2BD2FEDD003868B7 /* FetchDessertMealListUseCase.swift in Sources */,
+				655051D52BD32306003868B7 /* MealRepoImpl.swift in Sources */,
+				655051D72BD32362003868B7 /* MealError.swift in Sources */,
 				655051702BD2F6A7003868B7 /* CategoryTest.swift in Sources */,
 				655051B32BD300AC003868B7 /* Meal.swift in Sources */,
 				655051AC2BD2FEE2003868B7 /* BaseRepo.swift in Sources */,
 				655051AB2BD2FEDF003868B7 /* CategoryRepo.swift in Sources */,
+				655051D32BD322F4003868B7 /* MealRepo.swift in Sources */,
 				655051B12BD2FEF1003868B7 /* HTTPMethod.swift in Sources */,
 				655051AE2BD2FEE7003868B7 /* APIService.swift in Sources */,
 				655051AD2BD2FEE5003868B7 /* CategoryRepoImpl.swift in Sources */,
+				655051D42BD322F6003868B7 /* MealDetail.swift in Sources */,
 				655051AF2BD2FEEB003868B7 /* APIEndPoint.swift in Sources */,
+				655051D62BD32328003868B7 /* MealEndPoint.swift in Sources */,
+				655051D22BD321B9003868B7 /* LookUpMealUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

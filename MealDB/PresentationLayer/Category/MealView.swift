@@ -13,10 +13,18 @@ struct MealViewCell: View {
     let meal: Meal
     var body: some View {
         HStack {
-            LazyImage(url: URL(string: meal.strMealThumb))
-                .processors([.resize(width:22)])
-                .padding(.trailing, 8)
-            Text(meal.strMeal)
+            if let mealThumb = meal.strMealThumb, let url = URL(string: mealThumb) {
+                LazyImage(url: url)
+                    .processors([.resize(width:22)])
+                    .padding(.trailing, 8)
+            }
+            else {
+                Image(systemName: "fork.knife")
+                    .resizable()
+                    .frame(width: 22)
+            }
+            
+            Text(meal.strMeal ?? "N/A")
             Spacer()
             Image(systemName: "chevron.forward")
         }
