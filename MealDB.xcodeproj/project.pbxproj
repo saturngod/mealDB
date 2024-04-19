@@ -53,6 +53,8 @@
 		655051D52BD32306003868B7 /* MealRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051C52BD3135F003868B7 /* MealRepoImpl.swift */; };
 		655051D62BD32328003868B7 /* MealEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051C92BD3152D003868B7 /* MealEndPoint.swift */; };
 		655051D72BD32362003868B7 /* MealError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051CB2BD31A2A003868B7 /* MealError.swift */; };
+		655051DA2BD325A3003868B7 /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051D92BD325A3003868B7 /* MealDetailView.swift */; };
+		655051DC2BD326EA003868B7 /* MealDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051DB2BD326EA003868B7 /* MealDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,8 @@
 		655051CB2BD31A2A003868B7 /* MealError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealError.swift; sourceTree = "<group>"; };
 		655051CD2BD31D66003868B7 /* LookUpMealUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookUpMealUseCase.swift; sourceTree = "<group>"; };
 		655051D02BD31E41003868B7 /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
+		655051D92BD325A3003868B7 /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
+		655051DB2BD326EA003868B7 /* MealDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +201,7 @@
 		655051882BD2F7A6003868B7 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				655051D82BD32540003868B7 /* Meal */,
 				655051B42BD30574003868B7 /* Category */,
 			);
 			path = PresentationLayer;
@@ -320,6 +325,15 @@
 				655051D02BD31E41003868B7 /* Measurement.swift */,
 			);
 			path = ValueObject;
+			sourceTree = "<group>";
+		};
+		655051D82BD32540003868B7 /* Meal */ = {
+			isa = PBXGroup;
+			children = (
+				655051D92BD325A3003868B7 /* MealDetailView.swift */,
+				655051DB2BD326EA003868B7 /* MealDetailViewModel.swift */,
+			);
+			path = Meal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,7 +481,9 @@
 				655051CA2BD3152D003868B7 /* MealEndPoint.swift in Sources */,
 				6550515F2BD2F6A6003868B7 /* MealDBApp.swift in Sources */,
 				655051C62BD3135F003868B7 /* MealRepoImpl.swift in Sources */,
+				655051DA2BD325A3003868B7 /* MealDetailView.swift in Sources */,
 				6550518E2BD2F7E4003868B7 /* NetworkService.swift in Sources */,
+				655051DC2BD326EA003868B7 /* MealDetailViewModel.swift in Sources */,
 				655051932BD2F82B003868B7 /* CategoryEndPoint.swift in Sources */,
 				6550519C2BD2F9B1003868B7 /* APIService.swift in Sources */,
 				655051A92BD2FE98003868B7 /* FetchDessertMealListUseCase.swift in Sources */,

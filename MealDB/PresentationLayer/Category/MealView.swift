@@ -26,7 +26,7 @@ struct MealViewCell: View {
             
             Text(meal.strMeal ?? "N/A")
             Spacer()
-            Image(systemName: "chevron.forward")
+            
         }
         .contentShape(Rectangle())
     }

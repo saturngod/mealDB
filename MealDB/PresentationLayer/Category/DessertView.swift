@@ -36,8 +36,11 @@ struct DessertView: View {
     
     var dessertList: some View {
         List {
+            
             ForEach(viewModel.meals,id:\.idMeal) { meal in
-                MealViewCell(meal: meal)
+                NavigationLink(destination: MealDetailView(mealId: meal.idMeal), label: {
+                    MealViewCell(meal: meal)
+                })
             }
         }
         .listStyle(.plain)
