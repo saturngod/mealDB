@@ -11,7 +11,7 @@ import SwiftUI
 struct MealDBApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            DessertView()
         }
     }
 }
