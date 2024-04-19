@@ -15,6 +15,13 @@ class FetchDessertMealList {
     }
     
     func exec() async -> Result<[Meal],Error> {
-        return await repo.getMealListFromCategory(name: "Dessert")
+        let result =  await repo.getMealListFromCategory(name: "Dessert")
+        
+        switch result {
+        case .success(let meals):
+            return .success(meals.sorted { $0.strMeal < $1.strMeal})
+        case .failure(let error):
+            return .failure(error)
+        }
     }
 }

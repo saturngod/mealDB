@@ -12,18 +12,35 @@ struct DessertView: View {
     
     
     var body: some View {
-        VStack {
-            switch viewModel.viewState {
-            case .error(let error):
-                Text("Sorry! There is issue")
-                Text(error.localizedDescription)
-            case .loading:
-                Text("Loading...")
-            case .idle:
-                Text("ready")
+        NavigationView {
+            VStack {
+                switch viewModel.viewState {
+                case .error(let error):
+                    Text("Sorry! There is issue")
+                    Text(error.localizedDescription)
+                case .loading:
+                    ProgressView()
+                        .controlSize(.large)
+                case .idle:
+                    dessertList
+                }
+            }
+            .onAppear(perform: {
+                Task {
+                    await viewModel.loadMeals()
+                }
+            })
+            .navigationTitle("Dessert")
+        }
+    }
+    
+    var dessertList: some View {
+        List {
+            ForEach(viewModel.meals,id:\.idMeal) { meal in
+                MealViewCell(meal: meal)
             }
         }
-        .padding()
+        .listStyle(.plain)
     }
 }
 

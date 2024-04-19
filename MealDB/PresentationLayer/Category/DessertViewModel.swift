@@ -13,7 +13,6 @@ class DessertViewModel: ObservableObject {
     @Published var viewState: ViewState = .idle
     
     
-    
     func loadMeals() async {
         self.viewState = .loading
         let useCase = FetchDessertMealList()

@@ -36,6 +36,9 @@
 		655051B32BD300AC003868B7 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051962BD2F8F9003868B7 /* Meal.swift */; };
 		655051B62BD30596003868B7 /* DessertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051B52BD30596003868B7 /* DessertViewModel.swift */; };
 		655051B92BD306DD003868B7 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051B82BD306DD003868B7 /* ViewState.swift */; };
+		655051BC2BD30A9F003868B7 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 655051BB2BD30A9F003868B7 /* Nuke */; };
+		655051BE2BD30A9F003868B7 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 655051BD2BD30A9F003868B7 /* NukeUI */; };
+		655051C02BD30AF5003868B7 /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051BF2BD30AF5003868B7 /* MealView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,7 @@
 		655051A82BD2FE98003868B7 /* FetchDessertMealList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDessertMealList.swift; sourceTree = "<group>"; };
 		655051B52BD30596003868B7 /* DessertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertViewModel.swift; sourceTree = "<group>"; };
 		655051B82BD306DD003868B7 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		655051BF2BD30AF5003868B7 /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				655051BC2BD30A9F003868B7 /* Nuke in Frameworks */,
+				655051BE2BD30A9F003868B7 /* NukeUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +271,7 @@
 			children = (
 				655051602BD2F6A6003868B7 /* DessertView.swift */,
 				655051B52BD30596003868B7 /* DessertViewModel.swift */,
+				655051BF2BD30AF5003868B7 /* MealView.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -293,6 +300,10 @@
 			dependencies = (
 			);
 			name = MealDB;
+			packageProductDependencies = (
+				655051BB2BD30A9F003868B7 /* Nuke */,
+				655051BD2BD30A9F003868B7 /* NukeUI */,
+			);
 			productName = MealDB;
 			productReference = 6550515B2BD2F6A6003868B7 /* MealDB.app */;
 			productType = "com.apple.product-type.application";
@@ -365,6 +376,9 @@
 				Base,
 			);
 			mainGroup = 655051522BD2F6A6003868B7;
+			packageReferences = (
+				655051BA2BD30A9F003868B7 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = 6550515C2BD2F6A6003868B7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -421,6 +435,7 @@
 				6550519F2BD2FBEB003868B7 /* CategoryRepo.swift in Sources */,
 				655051B62BD30596003868B7 /* DessertViewModel.swift in Sources */,
 				655051A42BD2FC51003868B7 /* CategoryRepoImpl.swift in Sources */,
+				655051C02BD30AF5003868B7 /* MealView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -762,6 +777,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		655051BA2BD30A9F003868B7 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		655051BB2BD30A9F003868B7 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 655051BA2BD30A9F003868B7 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		655051BD2BD30A9F003868B7 /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 655051BA2BD30A9F003868B7 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = NukeUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 655051532BD2F6A6003868B7 /* Project object */;
 }
