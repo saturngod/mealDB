@@ -37,13 +37,14 @@ struct DessertView: View {
     var dessertList: some View {
         List {
             
-            ForEach(viewModel.meals,id:\.idMeal) { meal in
+            ForEach(viewModel.filteredMeals,id:\.idMeal) { meal in
                 NavigationLink(destination: MealDetailView(mealId: meal.idMeal), label: {
                     MealViewCell(meal: meal)
                 })
             }
         }
         .listStyle(.plain)
+        .searchable(text: $viewModel.search)
     }
 }
 

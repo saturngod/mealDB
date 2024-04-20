@@ -11,7 +11,31 @@ import Foundation
 class DessertViewModel: ObservableObject {
     @Published var meals: [Meal] = []
     @Published var viewState: ViewState = .idle
+    @Published var actualSearch: String = ""
     
+    
+    private var delay: Delay = Delay()
+    
+    var search: String = "" {
+        didSet {
+            delay.cancel()
+            delay.performWork { [weak self] in
+                DispatchQueue.main.async {
+                    self?.actualSearch = self?.search ?? ""
+                }
+            }
+        }
+    }
+    
+    var filteredMeals: [Meal] {
+        if actualSearch.isEmpty {
+            return meals
+        } else {
+            return meals.filter { meal in
+                meal.strMeal?.localizedCaseInsensitiveContains(actualSearch) ?? false
+            }
+        }
+    }
     
     func loadMeals() async {
         self.viewState = .loading
