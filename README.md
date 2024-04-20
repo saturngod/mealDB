@@ -12,11 +12,8 @@ Using API from [https://themealdb.com/api.php](https://themealdb.com/api.php)
 ## Screens
 
 ![Home](./screenshots/home.png)
-
-![Filter](./screenshots/Filter.png)
-
+![Filter](./screenshots/filter.png)
 ![Detail](./screenshots/detail.png)
-
 ![Ingredient](./screenshots/ingredient.png)
 
 ## Thrid Party Library
