@@ -1,5 +1,13 @@
 # Dessert iOS
 
+![](./screenshots/logo.png)
+
+Using 
+
+- Target iOS SDK 15.0
+- SwiftUI with async/await
+
+
 ## API
 
 Using API from [https://themealdb.com/api.php](https://themealdb.com/api.php)
