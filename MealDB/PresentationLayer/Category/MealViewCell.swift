@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import NukeUI
+import Kingfisher
 
 struct MealViewCell: View {
     
@@ -14,8 +14,13 @@ struct MealViewCell: View {
     var body: some View {
         HStack {
             if let mealThumb = meal.strMealThumb, let url = URL(string: mealThumb) {
-                LazyImage(url: url)
-                    .processors([.resize(width:22)])
+                KFImage(url)
+                    .placeholder({ _ in
+                        Color(.lightGray)
+                    })
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100)
                     .padding(.trailing, 8)
             }
             else {

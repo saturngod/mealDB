@@ -36,8 +36,6 @@
 		655051B32BD300AC003868B7 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051962BD2F8F9003868B7 /* Meal.swift */; };
 		655051B62BD30596003868B7 /* DessertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051B52BD30596003868B7 /* DessertViewModel.swift */; };
 		655051B92BD306DD003868B7 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051B82BD306DD003868B7 /* ViewState.swift */; };
-		655051BC2BD30A9F003868B7 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 655051BB2BD30A9F003868B7 /* Nuke */; };
-		655051BE2BD30A9F003868B7 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 655051BD2BD30A9F003868B7 /* NukeUI */; };
 		655051C02BD30AF5003868B7 /* MealViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051BF2BD30AF5003868B7 /* MealViewCell.swift */; };
 		655051C22BD3117F003868B7 /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051C12BD3117F003868B7 /* MealDetail.swift */; };
 		655051C42BD31336003868B7 /* MealRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051C32BD31336003868B7 /* MealRepo.swift */; };
@@ -55,6 +53,7 @@
 		655051D72BD32362003868B7 /* MealError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051CB2BD31A2A003868B7 /* MealError.swift */; };
 		655051DA2BD325A3003868B7 /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051D92BD325A3003868B7 /* MealDetailView.swift */; };
 		655051DC2BD326EA003868B7 /* MealDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051DB2BD326EA003868B7 /* MealDetailViewModel.swift */; };
+		655051DF2BD357B9003868B7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 655051DE2BD357B9003868B7 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,8 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				655051BC2BD30A9F003868B7 /* Nuke in Frameworks */,
-				655051BE2BD30A9F003868B7 /* NukeUI in Frameworks */,
+				655051DF2BD357B9003868B7 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,8 +351,7 @@
 			);
 			name = MealDB;
 			packageProductDependencies = (
-				655051BB2BD30A9F003868B7 /* Nuke */,
-				655051BD2BD30A9F003868B7 /* NukeUI */,
+				655051DE2BD357B9003868B7 /* Kingfisher */,
 			);
 			productName = MealDB;
 			productReference = 6550515B2BD2F6A6003868B7 /* MealDB.app */;
@@ -429,7 +426,7 @@
 			);
 			mainGroup = 655051522BD2F6A6003868B7;
 			packageReferences = (
-				655051BA2BD30A9F003868B7 /* XCRemoteSwiftPackageReference "Nuke" */,
+				655051DD2BD357B9003868B7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 6550515C2BD2F6A6003868B7 /* Products */;
 			projectDirPath = "";
@@ -847,26 +844,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		655051BA2BD30A9F003868B7 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+		655051DD2BD357B9003868B7 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kean/Nuke.git";
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 12.5.0;
+				minimumVersion = 7.11.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		655051BB2BD30A9F003868B7 /* Nuke */ = {
+		655051DE2BD357B9003868B7 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 655051BA2BD30A9F003868B7 /* XCRemoteSwiftPackageReference "Nuke" */;
-			productName = Nuke;
-		};
-		655051BD2BD30A9F003868B7 /* NukeUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 655051BA2BD30A9F003868B7 /* XCRemoteSwiftPackageReference "Nuke" */;
-			productName = NukeUI;
+			package = 655051DD2BD357B9003868B7 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

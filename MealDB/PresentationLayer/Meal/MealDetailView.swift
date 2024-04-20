@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import NukeUI
+import Kingfisher
 
 struct MealDetailView: View {
     
@@ -15,35 +15,28 @@ struct MealDetailView: View {
     
     var body: some View {
         
-            VStack {
-                switch viewModel.viewState{
-                case .loading:
-                    ProgressView()
-                        .controlSize(.large)
-                    
-                case .error(error: let error):
-                    Text("Oop! something went wrong")
-                    Text(error.localizedDescription)
-                case .idle:
-                    if viewModel.mealDetail != nil {
-                        ScrollView {
-                            VStack {
-                                mealDetailHeader
-                                instructionBody
-                                instructionList
-                                Text("\(viewModel.ingredientsArray.count)")
-                            }
-                            .padding()
-                        }
-                        
-                    }
-                }
+        VStack {
+            switch viewModel.viewState{
+            case .loading:
+                ProgressView()
+                    .controlSize(.large)
                 
+            case .error(error: let error):
+                Text("Oop! something went wrong")
+                Text(error.localizedDescription)
+            case .idle:
+                if viewModel.mealDetail != nil {
+                    ScrollView(showsIndicators: false) {
+                        mealDetailHeader
+                        instructionBody
+                        ingredientList
+                    }
+                    
+                }
             }
-            .navigationTitle(viewModel.mealDetail?.strMeal ?? "")
-            .navigationBarTitleDisplayMode(.inline)
-               
-        
+            
+        }
+        .edgesIgnoringSafeArea(.top)
         .onAppear {
             Task {
                 await viewModel.loadDetail(mealId:mealId)
@@ -52,29 +45,48 @@ struct MealDetailView: View {
     }
     
     var mealDetailHeader: some View {
-        HStack {
-            LazyImage(url: URL(string: viewModel.mealDetail?.strMealThumb ?? ""))
-                .processors([.resize(width:30)])
+        VStack {
+            KFImage(URL(string: viewModel.mealDetail?.strMealThumb ?? ""))
+                .resizable()
+                .scaledToFit()
+            
             Text(viewModel.mealDetail?.strMeal ?? "N/A")
+                .font(.title)
             Spacer()
         }
+        
     }
     
     var instructionBody: some View {
-        Text(viewModel.mealDetail?.strInstructions ?? "")
+        VStack(alignment: .leading) {
+            Text("Instruction")
+                .font(.title2)
+                .padding(.bottom,8)
+            Text(viewModel.mealDetail?.strInstructions ?? "")
+                .fontWeight(.light)
+        }
+        .padding()
     }
     
-    var instructionList: some View {
-        VStack {
-            
-            ForEach(viewModel.ingredientsArray,id:\.self) { integredient in
-                HStack {
-                    Text(integredient.ingredient)
-                    Text("|")
-                    Text(integredient.measurement)
+    var ingredientList: some View {
+        GroupBox {
+            Text("Ingredient")
+                .font(.title2)
+                .padding(.bottom,8)
+                ForEach(viewModel.ingredientsArray,id:\.self) { integredient in
+                    if integredient != viewModel.ingredientsArray.first {
+                        Divider().padding(.vertical, 2)
+                    }
+                    HStack {
+                        Text(integredient.ingredient)
+                        Spacer()
+                        Text(integredient.measurement)
+                    }
                 }
-            }
+            
         }
+        .clipShape(RoundedRectangle(cornerRadius: 8))
+        .padding()
     }
 }
 
