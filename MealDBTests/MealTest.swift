@@ -11,7 +11,7 @@ final class MealTest: XCTestCase {
 
     func testMealDetail() async throws {
         let useCase = LookUpMealUseCase()
-        let result = await useCase.exec(mealId: "53049")
+        let result = await useCase.exec(mealId: "52768")
         switch result {
         case .success(let meal):
             XCTAssertNotNil(meal.idMeal)
