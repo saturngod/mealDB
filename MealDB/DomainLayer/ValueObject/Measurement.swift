@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Measurement {
-    let name: String
-    let measture: String
+struct Measurement: Hashable {
+    let ingredient: String
+    let measurement: String
 }

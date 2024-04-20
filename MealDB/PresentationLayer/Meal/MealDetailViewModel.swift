@@ -12,7 +12,7 @@ class MealDetailViewModel: ObservableObject {
     
     @Published var mealDetail: MealDetail?
     @Published var viewState: ViewState = .idle
-    @Published var ingredientsArray: [[String: String]] = []
+    @Published var ingredientsArray: [Measurement] = []
             
     
     func loadDetail(mealId: String) async {
@@ -29,14 +29,14 @@ class MealDetailViewModel: ObservableObject {
         }
     }
     
-    private func generateIngredient(mealDetail: MealDetail) -> [[String: String]] {
-        var result = [[String: String]]()
-        let mirror = Mirror(reflecting: self)
+    private func generateIngredient(mealDetail: MealDetail) -> [Measurement] {
+        var result = [Measurement]()
+        let mirror = Mirror(reflecting: mealDetail)
         for case let (label?, value) in mirror.children {
             if label.starts(with: "strIngredient"), let ingredient = value as? String, !ingredient.isEmpty {
                 let index = label.dropFirst("strIngredient".count)
                 if let measure = mirror.descendant("strMeasure\(index)") as? String {
-                    result.append(["ingredient": ingredient, "measure": measure])
+                    result.append(Measurement(ingredient: ingredient, measurement: measure))
                 }
             }
         }

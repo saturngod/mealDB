@@ -38,7 +38,7 @@
 		655051B92BD306DD003868B7 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051B82BD306DD003868B7 /* ViewState.swift */; };
 		655051BC2BD30A9F003868B7 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 655051BB2BD30A9F003868B7 /* Nuke */; };
 		655051BE2BD30A9F003868B7 /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 655051BD2BD30A9F003868B7 /* NukeUI */; };
-		655051C02BD30AF5003868B7 /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051BF2BD30AF5003868B7 /* MealView.swift */; };
+		655051C02BD30AF5003868B7 /* MealViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051BF2BD30AF5003868B7 /* MealViewCell.swift */; };
 		655051C22BD3117F003868B7 /* MealDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051C12BD3117F003868B7 /* MealDetail.swift */; };
 		655051C42BD31336003868B7 /* MealRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051C32BD31336003868B7 /* MealRepo.swift */; };
 		655051C62BD3135F003868B7 /* MealRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051C52BD3135F003868B7 /* MealRepoImpl.swift */; };
@@ -97,7 +97,7 @@
 		655051A82BD2FE98003868B7 /* FetchDessertMealListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDessertMealListUseCase.swift; sourceTree = "<group>"; };
 		655051B52BD30596003868B7 /* DessertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertViewModel.swift; sourceTree = "<group>"; };
 		655051B82BD306DD003868B7 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
-		655051BF2BD30AF5003868B7 /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
+		655051BF2BD30AF5003868B7 /* MealViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewCell.swift; sourceTree = "<group>"; };
 		655051C12BD3117F003868B7 /* MealDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetail.swift; sourceTree = "<group>"; };
 		655051C32BD31336003868B7 /* MealRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRepo.swift; sourceTree = "<group>"; };
 		655051C52BD3135F003868B7 /* MealRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealRepoImpl.swift; sourceTree = "<group>"; };
@@ -305,7 +305,7 @@
 			children = (
 				655051602BD2F6A6003868B7 /* DessertView.swift */,
 				655051B52BD30596003868B7 /* DessertViewModel.swift */,
-				655051BF2BD30AF5003868B7 /* MealView.swift */,
+				655051BF2BD30AF5003868B7 /* MealViewCell.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -496,7 +496,7 @@
 				655051C22BD3117F003868B7 /* MealDetail.swift in Sources */,
 				655051CE2BD31D66003868B7 /* LookUpMealUseCase.swift in Sources */,
 				655051A42BD2FC51003868B7 /* CategoryRepoImpl.swift in Sources */,
-				655051C02BD30AF5003868B7 /* MealView.swift in Sources */,
+				655051C02BD30AF5003868B7 /* MealViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
