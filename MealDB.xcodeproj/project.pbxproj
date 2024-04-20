@@ -55,6 +55,13 @@
 		655051DC2BD326EA003868B7 /* MealDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051DB2BD326EA003868B7 /* MealDetailViewModel.swift */; };
 		655051DF2BD357B9003868B7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 655051DE2BD357B9003868B7 /* Kingfisher */; };
 		655051E12BD35FF2003868B7 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051E02BD35FF2003868B7 /* Delay.swift */; };
+		655051E22BD3E70F003868B7 /* MealDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051DB2BD326EA003868B7 /* MealDetailViewModel.swift */; };
+		655051E42BD3E970003868B7 /* MealDetailModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051E32BD3E970003868B7 /* MealDetailModelTest.swift */; };
+		655051E52BD3ECA1003868B7 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051B82BD306DD003868B7 /* ViewState.swift */; };
+		655051E62BD3ECCF003868B7 /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051D02BD31E41003868B7 /* Measurement.swift */; };
+		655051EA2BD3F23B003868B7 /* DessertViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051E92BD3F23B003868B7 /* DessertViewModelTest.swift */; };
+		655051EB2BD3F3C0003868B7 /* DessertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051B52BD30596003868B7 /* DessertViewModel.swift */; };
+		655051EC2BD3F754003868B7 /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655051E02BD35FF2003868B7 /* Delay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +116,8 @@
 		655051D92BD325A3003868B7 /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
 		655051DB2BD326EA003868B7 /* MealDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewModel.swift; sourceTree = "<group>"; };
 		655051E02BD35FF2003868B7 /* Delay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delay.swift; sourceTree = "<group>"; };
+		655051E32BD3E970003868B7 /* MealDetailModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailModelTest.swift; sourceTree = "<group>"; };
+		655051E92BD3F23B003868B7 /* DessertViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +194,8 @@
 			children = (
 				6550516F2BD2F6A7003868B7 /* CategoryTest.swift */,
 				655051C72BD31492003868B7 /* MealTest.swift */,
+				655051E32BD3E970003868B7 /* MealDetailModelTest.swift */,
+				655051E92BD3F23B003868B7 /* DessertViewModelTest.swift */,
 			);
 			path = MealDBTests;
 			sourceTree = "<group>";
@@ -510,14 +521,21 @@
 				655051B02BD2FEEE003868B7 /* CategoryEndPoint.swift in Sources */,
 				655051AA2BD2FEDD003868B7 /* FetchDessertMealListUseCase.swift in Sources */,
 				655051D52BD32306003868B7 /* MealRepoImpl.swift in Sources */,
+				655051EA2BD3F23B003868B7 /* DessertViewModelTest.swift in Sources */,
 				655051D72BD32362003868B7 /* MealError.swift in Sources */,
+				655051EB2BD3F3C0003868B7 /* DessertViewModel.swift in Sources */,
 				655051702BD2F6A7003868B7 /* CategoryTest.swift in Sources */,
+				655051E22BD3E70F003868B7 /* MealDetailViewModel.swift in Sources */,
+				655051E52BD3ECA1003868B7 /* ViewState.swift in Sources */,
 				655051B32BD300AC003868B7 /* Meal.swift in Sources */,
 				655051AC2BD2FEE2003868B7 /* BaseRepo.swift in Sources */,
 				655051AB2BD2FEDF003868B7 /* CategoryRepo.swift in Sources */,
+				655051EC2BD3F754003868B7 /* Delay.swift in Sources */,
+				655051E42BD3E970003868B7 /* MealDetailModelTest.swift in Sources */,
 				655051D32BD322F4003868B7 /* MealRepo.swift in Sources */,
 				655051B12BD2FEF1003868B7 /* HTTPMethod.swift in Sources */,
 				655051AE2BD2FEE7003868B7 /* APIService.swift in Sources */,
+				655051E62BD3ECCF003868B7 /* Measurement.swift in Sources */,
 				655051AD2BD2FEE5003868B7 /* CategoryRepoImpl.swift in Sources */,
 				655051D42BD322F6003868B7 /* MealDetail.swift in Sources */,
 				655051AF2BD2FEEB003868B7 /* APIEndPoint.swift in Sources */,

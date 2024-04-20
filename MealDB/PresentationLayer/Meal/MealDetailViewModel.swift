@@ -13,12 +13,17 @@ class MealDetailViewModel: ObservableObject {
     @Published var mealDetail: MealDetail?
     @Published var viewState: ViewState = .idle
     @Published var ingredientsArray: [Measurement] = []
-            
+    
+    private let lookUpMealUseCase: LookUpMealUseCaseProtocol
+    
+    init(lookUpMealUseCase: LookUpMealUseCaseProtocol = LookUpMealUseCase()) {
+        self.lookUpMealUseCase = lookUpMealUseCase
+    }
     
     func loadDetail(mealId: String) async {
         viewState = .loading
-        let useCase = LookUpMealUseCase()
-        let result = await useCase.exec(mealId: mealId)
+        
+        let result = await lookUpMealUseCase.exec(mealId: mealId)
         switch result {
         case .success(let detail):
             self.ingredientsArray = generateIngredient(mealDetail: detail)

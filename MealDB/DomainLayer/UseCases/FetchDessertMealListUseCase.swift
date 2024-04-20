@@ -7,8 +7,13 @@
 
 import Foundation
 
-class FetchDessertMealListUseCase {
-    private let repo: CategoryRepo
+protocol FetchDessertMealListUseCaseProtocol {
+    var repo : CategoryRepo { get }
+    func exec() async -> Result<[Meal],Error>
+}
+
+class FetchDessertMealListUseCase: FetchDessertMealListUseCaseProtocol {
+    var repo: CategoryRepo
     
     init(repo: CategoryRepo = CategoryRepoImpl()) {
         self.repo = repo

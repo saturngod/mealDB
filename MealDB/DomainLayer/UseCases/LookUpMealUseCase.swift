@@ -7,8 +7,13 @@
 
 import Foundation
 
-struct LookUpMealUseCase {
-    private let repo: MealRepo
+protocol LookUpMealUseCaseProtocol {
+    var repo: MealRepo { get }
+    func exec(mealId: String) async -> Result<MealDetail,Error>
+}
+
+struct LookUpMealUseCase: LookUpMealUseCaseProtocol {
+    var repo: any MealRepo
     
     init(repo: MealRepo = MealRepoImpl()) {
         self.repo = repo

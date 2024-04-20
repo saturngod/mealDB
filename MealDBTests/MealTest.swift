@@ -8,7 +8,7 @@
 import XCTest
 
 final class MealTest: XCTestCase {
-
+    
     func testMealDetail() async throws {
         let useCase = LookUpMealUseCase()
         let result = await useCase.exec(mealId: "52768")
@@ -30,5 +30,7 @@ final class MealTest: XCTestCase {
             XCTAssertNotEqual(error.localizedDescription, "")
         }
     }
-
+    
+    
+    
 }

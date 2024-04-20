@@ -13,8 +13,12 @@ class DessertViewModel: ObservableObject {
     @Published var viewState: ViewState = .idle
     @Published var actualSearch: String = ""
     
-    
+    private var useCase: FetchDessertMealListUseCaseProtocol
     private var delay: Delay = Delay()
+    
+    init(useCase: FetchDessertMealListUseCaseProtocol = FetchDessertMealListUseCase()) {
+        self.useCase = useCase
+    }
     
     var search: String = "" {
         didSet {
@@ -39,7 +43,6 @@ class DessertViewModel: ObservableObject {
     
     func loadMeals() async {
         self.viewState = .loading
-        let useCase = FetchDessertMealListUseCase()
         let result = await useCase.exec()
         self.handleMealsResult(result: result)
     }
